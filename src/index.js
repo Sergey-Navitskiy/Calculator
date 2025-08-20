@@ -91,3 +91,38 @@ document.querySelectorAll(".btn").forEach((button) => {
     if (action === "equals") equals();
   });
 });
+
+document.addEventListener("keydown", (event) => {
+  const key = event.key;
+
+  // Если цифра
+  if (!isNaN(key)) {
+    inputDigit(key);
+  }
+
+  // Точка
+  if (key === ".") {
+    inputDot();
+  }
+
+  // Операция
+  if (key === "+" || key === "-" || key === "*" || key === "/") {
+    chooseOperator(key);
+  }
+
+  // Проценты
+  if (key === "%") {
+    percent("%");
+  }
+
+  //  = равно
+  if (key === "Enter" || key === "=") {
+    event.preventDefault(); // чтобы не срабатывал submit
+    equals();
+  }
+
+  // Escape = сброс
+  if (key === "Escape") {
+    clearAll();
+  }
+});
