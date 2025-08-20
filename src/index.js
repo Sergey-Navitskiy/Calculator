@@ -121,7 +121,7 @@ document.addEventListener("keydown", (event) => {
     equals();
   }
 
-  // Escape = сброс
+  // сброс
   if (key === "Escape" || key === "c") {
     clearAll();
   }
