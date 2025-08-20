@@ -122,7 +122,7 @@ document.addEventListener("keydown", (event) => {
   }
 
   // Escape = сброс
-  if (key === "Escape") {
+  if (key === "Escape" || key === "c") {
     clearAll();
   }
 });
