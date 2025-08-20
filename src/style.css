@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #ececec;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: sans-serif;
+}
+
+.calculator {
+  background: #1c1c1c;
+  border-radius: 30px;
+  padding: 20px;
+  width: 350px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.display {
+  background: #333;
+  color: white;
+  font-size: 2.5rem;
+  text-align: right;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  min-height: 60px;
+  overflow-x: auto;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.btn {
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5%;
+  padding: 20px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+.gray {
+  background: #a5a5a5;
+  color: black;
+}
+
+.dark {
+  background: #333;
+  color: white;
+}
+
+.orange {
+  background: #f1a33c;
+  color: white;
+}
+
+.zero {
+  grid-column: span 2;
+  border-radius: 5px;
+}
+
+.history {
+  background: #222;
+  color: #bbb;
+  font-size: 1rem;
+  text-align: right;
+  padding: 8px 15px;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  min-height: 20px;
+  overflow-x: auto;
+}
+
+body.light {
+  background: #f4f4f4;
+  color: #222;
+}
+
+body.light .calculator {
+  background: #fff;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+body.light .btn.dark {
+  background: #e0e0e0;
+  color: #000;
+}
+
+body.light .btn.orange {
+  background: #ff9800;
+}
+
+.theme-switch {
+  margin-bottom: 15px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+}
